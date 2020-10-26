@@ -101,7 +101,7 @@ async def on_message(message):
     formats = ['jpg', 'png', 'gif', 'svg']
     attachments = [f for f in message.attachments if f.filename.split('.')[-1] in formats]
     if message.channel.name == 'bild' and not attachments:
-        await message.delete()
+        await bot.process_commands(message)
 
 
 
